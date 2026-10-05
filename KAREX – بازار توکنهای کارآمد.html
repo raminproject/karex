@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KAREX | بازار توکن‌های کارآمد</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#0d0d13;--card:#17171f;--tx:#f3f1ee;--mut:#9a9aa8;--bd:#2a2a36;--pri:#f15a22;--up:#3ddc97;--dn:#ff5d73;--gold:#f5b301}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f4f1;--card:#fff;--tx:#17171c;--mut:#6f6f7b;--bd:#e8e4df;--up:#0e9f6e;--dn:#e02f44}}
+:root[data-theme="light"]{--bg:#f6f4f1;--card:#fff;--tx:#17171c;--mut:#6f6f7b;--bd:#e8e4df;--up:#0e9f6e;--dn:#e02f44}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(600px 320px at 90% -5%,#f15a2240,transparent),radial-gradient(500px 300px at 0 25%,#8b5cf622,transparent),var(--bg);color:var(--tx);font-family:Vazirmatn,Tahoma,sans-serif;font-size:14px}
+a{color:inherit;text-decoration:none}
+header{background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.hd{max-width:1200px;margin:auto;display:flex;align-items:center;gap:16px;padding:10px 14px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:18px;color:var(--pri)}.logo small{color:var(--gold);font-weight:600}
+nav{display:flex;gap:4px;flex:1}nav a{padding:7px 14px;border-radius:8px;color:var(--mut);font-weight:600}
+nav a.on{background:var(--pri);color:#fff}
+.sim{font-size:11px;background:#fff3cd;color:#7a5b00;padding:3px 9px;border-radius:99px}
+.live{display:flex;align-items:center;gap:6px;color:var(--mut);font-size:12px}.live i{width:8px;height:8px;border-radius:50%;background:var(--up);animation:b 1.2s infinite}
+@keyframes b{50%{opacity:.25}}
+main{max-width:1200px;margin:auto;padding:14px}
+.g{display:grid;gap:14px}.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.main3{grid-template-columns:2fr 1fr}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:16px;min-width:0}
+h3{margin:0 0 10px;font-size:15px}
+.up{color:var(--up)}.dn{color:var(--dn)}.mut{color:var(--mut)}
+.pc{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
+.pc .nm{font-weight:800}.pc .pr{font-size:22px;font-weight:800;margin:6px 0}
+.badge{display:inline-block;padding:2px 8px;border-radius:6px;font-size:12px;font-weight:600;direction:ltr}
+.b-up{background:#0e9f6e22;color:var(--up)}.b-dn{background:#e02f4422;color:var(--dn)}
+.btn{border:0;border-radius:9px;padding:9px 18px;font:inherit;font-weight:700;cursor:pointer;color:#fff}
+.buy{background:var(--up)}.sell{background:var(--dn)}.pri{background:linear-gradient(135deg,#ff7a2f,#f15a22)}.ghost{background:transparent;color:var(--mut);border:1px solid var(--bd)}
+.row{display:flex;gap:8px;margin-top:8px}.row .btn{flex:1}
+.ch{position:relative;height:230px;touch-action:pan-y}.ch svg{width:100%;height:100%;display:block}
+.tip{position:absolute;top:4px;inset-inline-start:4px;background:var(--bg);border:1px solid var(--bd);border-radius:6px;padding:3px 8px;font-size:12px;display:none}
+.tabs{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}.tabs button{border:1px solid var(--bd);background:transparent;color:var(--mut);padding:5px 12px;border-radius:8px;font:inherit;cursor:pointer}
+.tabs button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13px;white-space:nowrap}
+th{color:var(--mut);font-weight:600;text-align:right;padding:6px}td{padding:6px;border-top:1px solid var(--bd)}
+.ob div{display:flex;justify-content:space-between;padding:2px 4px;font-size:12.5px;position:relative}
+.ob .a{color:var(--dn)}.ob .b{color:var(--up)}.ob .mid{justify-content:center;font-weight:800;font-size:15px;padding:6px;border-block:1px solid var(--bd);margin:4px 0}
+.ob span.bar{position:absolute;inset-block:0;inset-inline-end:0;opacity:.1;background:currentColor}
+label{display:block;font-size:12px;color:var(--mut);margin:8px 0 3px}
+input{width:100%;padding:9px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit;direction:ltr;text-align:right}
+.tot{display:flex;justify-content:space-between;margin:10px 0;font-weight:600}
+.big{font-size:20px;font-weight:800}
+.kv{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed var(--bd)}
+#toast{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));inset-inline:0;margin:auto;width:max-content;max-width:90%;background:#1b2433;color:#fff;padding:10px 18px;border-radius:10px;display:none;z-index:9}
+.note{font-size:11.5px;color:var(--mut);text-align:center;padding:14px}
+@media(max-width:900px){.main3,.g4{grid-template-columns:1fr 1fr}.main3>*{grid-column:1/-1}}
+@media(max-width:560px){.g2,.g4{grid-template-columns:1fr}.hd{gap:8px}nav{order:3;flex-basis:100%}nav a{flex:1;text-align:center}}
+.hero{background:linear-gradient(120deg,#f15a22,#ff8a3d 55%,#8b5cf6);color:#fff;border-radius:22px;padding:18px 20px;margin-bottom:14px;font-size:17px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}.hero .mut{color:#ffffffd0;font-size:13px}
+.fm{max-width:520px;margin:auto}textarea,select{width:100%;padding:9px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit}
+.chatbox{height:260px;overflow:auto;display:flex;flex-direction:column;gap:6px;padding:6px;background:var(--bg);border-radius:14px;margin-bottom:8px}.m{padding:8px 12px;border-radius:14px;max-width:80%}.bt{background:var(--card);align-self:flex-start}.us{background:var(--pri);color:#fff;align-self:flex-end}
+footer{max-width:1200px;margin:20px auto 0;padding:18px 14px;border-top:1px solid var(--bd);display:grid;grid-template-columns:repeat(3,1fr);gap:14px;color:var(--mut);font-size:13px}footer b{color:var(--tx)}
+@media(max-width:700px){footer{grid-template-columns:1fr}}
+.lg{display:flex;align-items:center;gap:8px}.lg b{font-size:22px;letter-spacing:2px;direction:ltr}.lg small{display:block;font-size:10px;color:var(--mut);font-weight:400;letter-spacing:0}nav{overflow-x:auto}nav a{white-space:nowrap}
+</style>
+</head>
+<body>
+<header><div class="hd">
+<a class="logo lg" href="#/"><svg width="30" height="30" viewBox="0 0 28 28"><g fill="#f15a22"><circle cx="14" cy="8" r="7"/><circle cx="7" cy="19" r="7"/><circle cx="21" cy="19" r="7"/></g></svg><span><b>KAREX</b><small>زیرمجموعه گروه مالی کارآمد</small></span></a>
+<nav><a href="#/">داشبورد</a><a href="#/market">بازار</a><a href="#/consult">مشاوره</a><a href="#/support">پشتیبانی</a><a href="#/about">درباره ما</a></nav><a class="btn pri" href="#/signup">ثبت‌نام</a>
+<span class="live"><i></i>بازار ۲۴ ساعته باز است</span>
+</div></header>
+<main id="app"></main>
+<footer><div><b>KAREX</b><br>پلتفرم معاملات ۲۴ ساعتهٔ توکن‌های صندوق و گواهی سپرده، زیرمجموعه گروه مالی کارآمد.</div><div><b>آدرس</b><br>تهران، [آدرس دفتر مرکزی؛ نمونه]<br>ایمیل: support@karex.example</div><div><b>پشتیبانی تلفنی ۲۴ ساعته</b><br>۰۲۱-۰۰۰۰۰۰۰۰ (شمارهٔ نمونه)</div></footer><div class="note">نمونهٔ اولیه آزمایشی: قیمت‌ها و موجودی‌ها فرضی‌اند و هیچ معامله یا حساب واقعی وجود ندارد.</div>
+<div id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);
+const fa=(n,d=0)=>Number(n).toLocaleString('fa-IR',{maximumFractionDigits:d,minimumFractionDigits:d});
+const rnd=(a,b)=>a+Math.random()*(b-a);
+const A={
+ zargar:{n:'توکن صندوق زرگر دیجیتال',sym:'ZARGAR',p:5200000,v:.004,c:'#f5b301'},
+ noqra:{n:'توکن صندوق نقرآمد دیجیتال',sym:'NOQRA',p:68000,v:.006,c:'#a8b3c4'},
+ kmct9:{n:'توکن گواهی سپرده وانت KMC T9',sym:'KMCT9',p:2450000,v:.003,c:'#22d3ee'},
+ pesteh:{n:'توکن گواهی سپرده پسته',sym:'PESTE',p:890000,v:.005,c:'#a3e635'}
+};
+const S={cash:250000000,hold:{zargar:12,noqra:300,kmct9:3,pesteh:20},orders:[],hist:[],id:100};
+for(const k in A){const a=A[k];let p=a.p*rnd(.97,1.03);a.s=[];for(let i=0;i<96;i++){p*=1+rnd(-.5,.5)*a.v*1.6;a.s.push(p)}
+ const f=a.p/a.s[95];a.s=a.s.map(x=>x*f);a.o=a.s[0];a.vol=rnd(900,2500);a.trades=[];}
+const chg=a=>(a.p-a.o)/a.o*100;
+const T={side:'buy',type:'limit',tf:96};
+const bd=c=>`<span class="badge ${c>=0?'b-up':'b-dn'}">${c>=0?'+':''}${fa(c,2)}٪</span>`;
+const cls=c=>c>=0?'up':'dn';
+function toast(m){const t=$('#toast');t.textContent=m;t.style.display='block';clearTimeout(t._t);t._t=setTimeout(()=>t.style.display='none',2600)}
+function exec(k,side,qty,price,reserved){const t=qty*price;
+ if(side==='buy'){if(!reserved)S.cash-=t;S.hold[k]+=qty}else{if(!reserved)S.hold[k]-=qty;S.cash+=t}
+ S.hist.unshift({t:new Date(),k,side,qty,price});}
+function submit(k){const q=+$('#q').value,type=T.type,side=T.side,a=A[k];
+ const pr=type==='market'?a.p:+$('#pr').value;
+ if(!(q>0)||!(pr>0))return toast('مقدار و قیمت را وارد کنید');
+ if(side==='buy'&&q*pr>S.cash)return toast('موجودی نقدی کافی نیست');
+ if(side==='sell'&&q>S.hold[k])return toast('موجودی دارایی کافی نیست');
+ const cross=type==='market'||(side==='buy'?pr>=a.p:pr<=a.p);
+ if(cross){exec(k,side,q,a.p);toast('سفارش (شبیه‌سازی) اجرا شد')}
+ else{if(side==='buy')S.cash-=q*pr;else S.hold[k]-=q;S.orders.unshift({id:++S.id,k,side,qty:q,price:pr});toast('سفارش باز ثبت شد')}
+ refresh();}
+function cancel(id){const i=S.orders.findIndex(o=>o.id==id);if(i<0)return;const o=S.orders[i];
+ if(o.side==='buy')S.cash+=o.qty*o.price;else S.hold[o.k]+=o.qty;S.orders.splice(i,1);refresh();}
+function tick(){for(const k in A){const a=A[k];a.p*=1+rnd(-.5,.5)*a.v;a.s.push(a.p);a.s.shift();
+ const q=rnd(.1,3);a.vol+=q;a.trades.unshift({t:new Date(),side:Math.random()>.5?'buy':'sell',q,p:a.p});a.trades.length=Math.min(a.trades.length,12);}
+ S.orders=S.orders.filter(o=>{const a=A[o.k];const hit=o.side==='buy'?a.p<=o.price:a.p>=o.price;
+  if(hit){exec(o.k,o.side,o.qty,o.price,true);toast('یک سفارش باز اجرا شد')}return!hit});
+ refresh();}
+for(let i=0;i<12;i++)for(const k in A){const a=A[k];a.trades.push({t:new Date(Date.now()-i*20000),side:i%2?'buy':'sell',q:rnd(.1,3),p:a.p*rnd(.998,1.002)})}
+function chart(el,k){const a=A[k],d=a.s.slice(-T.tf),mn=Math.min(...d),mx=Math.max(...d),W=600,H=230,r=mx-mn||1;
+ const X=i=>i/(d.length-1)*W,Y=v=>H-10-(v-mn)/r*(H-30);
+ const pts=d.map((v,i)=>X(i).toFixed(1)+','+Y(v).toFixed(1)).join(' ');const col=d[d.length-1]>=d[0]?'var(--up)':'var(--dn)';
+ el.querySelector('svg')&&el.querySelector('svg').remove();
+ el.insertAdjacentHTML('afterbegin',`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+ ${[0,1,2,3].map(i=>`<line x1="0" x2="${W}" y1="${10+i*(H-30)/3}" y2="${10+i*(H-30)/3}" stroke="var(--bd)" stroke-dasharray="3"/>`).join('')}
+ <polygon points="0,${H} ${pts} ${W},${H}" fill="${col}" opacity=".1"/><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2" vector-effect="non-scaling-stroke"/>
+ <line id="cl" y1="0" y2="${H}" stroke="var(--mut)" style="display:none"/></svg>`);
+ el.onpointermove=e=>{const b=el.getBoundingClientRect(),x=Math.min(1,Math.max(0,(e.clientX-b.left)/b.width)),
+  i=Math.round((1-x)*(d.length-1)),ri=d.length-1-i;const rd=d[d.length-1-i]??d[0];
+  const l=el.querySelector('#cl');l.style.display='';l.setAttribute('x1',X(d.length-1-i));l.setAttribute('x2',X(d.length-1-i));
+  const t=el.querySelector('.tip');t.style.display='block';t.textContent=fa(rd)+' تومان'};
+ el.onpointerleave=()=>{const l=el.querySelector('#cl');if(l)l.style.display='none';el.querySelector('.tip').style.display='none'};}
+function book(k){const p=A[k].p;let h='<div class="ob"><div class="mut"><span>قیمت (تومان)</span><span>مقدار</span></div>';
+ const asks=[...Array(7)].map((_,i)=>[p*(1+.0006*(i+1)+rnd(0,.0002)),rnd(.5,9)]).reverse();
+ const bids=[...Array(7)].map((_,i)=>[p*(1-.0006*(i+1)-rnd(0,.0002)),rnd(.5,9)]);
+ const row=(c,r)=>`<div class="${c}"><span class="bar" style="width:${r[1]*10}%"></span><span>${fa(r[0])}</span><span>${fa(r[1],2)}</span></div>`;
+ return h+asks.map(r=>row('a',r)).join('')+`<div class="mid ${cls(chg(A[k]))}">${fa(p)}</div>`+bids.map(r=>row('b',r)).join('')+'</div>';}
+function trades(k){return '<div class="tw"><table><tr><th>زمان</th><th>قیمت</th><th>مقدار</th></tr>'+A[k].trades.map(t=>`<tr><td class="mut">${t.t.toLocaleTimeString('fa-IR')}</td><td class="${t.side=='buy'?'up':'dn'}">${fa(t.p)}</td><td>${fa(t.q,2)}</td></tr>`).join('')+'</table></div>';}
+function panel(k){const a=A[k];return `<div class="card"><h3>خرید / فروش ${a.sym}</h3>
+ <div class="tabs"><button data-s="buy" class="${T.side=='buy'?'on':''}">خرید</button><button data-s="sell" class="${T.side=='sell'?'on':''}">فروش</button>
+ <button data-t="limit" class="${T.type=='limit'?'on':''}">محدود</button><button data-t="market" class="${T.type=='market'?'on':''}">بازار</button></div>
+ <div class="kv"><span class="mut">موجودی نقدی</span><b id="pc"></b></div><div class="kv"><span class="mut">دارایی شما</span><b id="ph"></b></div>
+ <label>قیمت (تومان)</label><input id="pr" inputmode="decimal" value="${Math.round(a.p)}" ${T.type=='market'?'disabled':''}>
+ <label>مقدار (واحد)</label><input id="q" inputmode="decimal" placeholder="۰">
+ <div class="tot"><span>مبلغ کل</span><span id="tt">۰</span></div>
+ <button class="btn ${T.side}" style="width:100%" id="go">${T.side=='buy'?'ثبت سفارش خرید':'ثبت سفارش فروش'}</button></div>`;}
+function bindPanel(k){const el=$('#panel');el.innerHTML=panel(k);
+ el.onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.s)T.side=b.dataset.s;if(b.dataset.t)T.type=b.dataset.t;if(b.id=='go')return submit(k);bindPanel(k);refresh()};
+ const up=()=>{const p=T.type=='market'?A[k].p:+$('#pr').value;$('#tt').textContent=fa((+$('#q').value||0)*p)+' تومان'};
+ $('#q').oninput=up;$('#pr').oninput=up;}
+function hold(){let tv=0;const rows=Object.keys(A).filter(k=>S.hold[k]>0).map(k=>{const v=S.hold[k]*A[k].p;tv+=v;
+ return `<tr><td><b>${A[k].sym}</b></td><td>${fa(S.hold[k],2)}</td><td>${fa(A[k].p)}</td><td>${fa(v)}</td></tr>`}).join('');
+ return{tv,html:`<div class="tw"><table><tr><th>دارایی</th><th>مقدار</th><th>قیمت</th><th>ارزش (تومان)</th></tr>${rows}</table></div>`};}
+function orders(){return S.orders.length?'<div class="tw"><table><tr><th>نماد</th><th>نوع</th><th>مقدار</th><th>قیمت</th><th></th></tr>'+S.orders.map(o=>`<tr><td>${A[o.k].sym}</td><td class="${o.side=='buy'?'up':'dn'}">${o.side=='buy'?'خرید':'فروش'}</td><td>${fa(o.qty,2)}</td><td>${fa(o.price)}</td><td><button class="btn ghost" style="padding:3px 10px" data-c="${o.id}">لغو</button></td></tr>`).join('')+'</table></div>':'<p class="mut">سفارش بازی وجود ندارد.</p>';}
+function history(){return S.hist.length?'<div class="tw"><table><tr><th>زمان</th><th>نماد</th><th>نوع</th><th>مقدار</th><th>قیمت</th></tr>'+S.hist.slice(0,10).map(h=>`<tr><td class="mut">${h.t.toLocaleTimeString('fa-IR')}</td><td>${A[h.k].sym}</td><td class="${h.side=='buy'?'up':'dn'}">${h.side=='buy'?'خرید':'فروش'}</td><td>${fa(h.qty,2)}</td><td>${fa(h.price)}</td></tr>`).join('')+'</table></div>':'<p class="mut">هنوز تراکنشی ثبت نشده است.</p>';}
+function priceCard(k,btns){const a=A[k];return `<div class="card"><div class="pc"><div><div class="nm" style="color:${a.c}">${a.n}</div><span class="mut">${a.sym}</span></div>${bd(chg(a))}</div>
+ <div class="pr" data-p="${k}">${fa(a.p)} <small class="mut">تومان</small></div>${btns?`<div class="row"><a class="btn buy" href="#/a/${k}" data-side="buy" style="text-align:center">خرید</a><a class="btn sell" href="#/a/${k}" data-side="sell" style="text-align:center">فروش</a></div>`:''}</div>`;}
+const chat=[{b:1,t:'سلام! 👋 من پشتیبان آنلاین KAREX هستم. چطور کمکت کنم؟'}];
+const fld=(l,id,t='text')=>`<label>${l}</label><input id="${id}" type="${t}">`;
+const esc=x=>x.replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+const PAGES={
+'#/signup':()=>`<div class="card fm"><h2 style="margin-top:0">بیا تو KAREX 🔥</h2><p class="mut">ثبت‌نام آزمایشی است؛ هیچ داده‌ای ذخیره یا ارسال نمی‌شود.</p>${fld('نام و نام خانوادگی','f1')}${fld('شماره موبایل','f2','tel')}${fld('ایمیل','f3','email')}${fld('رمز عبور','f4','password')}<button class="btn pri" style="width:100%;margin-top:14px" onclick="toast('ثبت‌نام آزمایشی انجام شد ✅')">ساخت حساب</button></div>`,
+'#/consult':()=>`<div class="card fm"><h2 style="margin-top:0">درخواست مشاوره</h2><p class="mut">کارشناسان گروه مالی کارآمد کنارتن؛ اطلاعات‌ت را بنویس تا تماس بگیریم.</p>${fld('نام و نام خانوادگی','c1')}${fld('شماره تماس','c2','tel')}<label>موضوع مشاوره</label><select id="c3"><option>آشنایی با توکن‌های صندوق</option><option>گواهی سپردهٔ کالایی (وانت، پسته)</option><option>مدیریت سرمایه</option><option>سایر</option></select><label>زمان مناسب تماس</label><select id="c4"><option>صبح</option><option>عصر</option><option>شب</option></select><label>توضیحات</label><textarea id="c5" rows="3"></textarea><button class="btn pri" style="width:100%;margin-top:14px" onclick="toast('درخواست مشاوره (آزمایشی) ثبت شد ✅')">ارسال درخواست</button></div>`,
+'#/support':()=>`<div class="g g2"><div class="card"><h3>پشتیبانی آنلاین 💬</h3><div class="chatbox" id="clog"></div><div class="row"><input id="cm" placeholder="پیامت را بنویس..." onkeydown="if(event.key=='Enter')sendMsg()" style="direction:rtl"><button class="btn pri" style="flex:0 0 auto" onclick="sendMsg()">ارسال</button></div></div><div class="card"><h3>پشتیبانی تلفنی ۲۴ ساعته 📞</h3><div class="big" style="direction:ltr;text-align:right">021-0000 0000</div><p class="mut">شمارهٔ نمونه · شبانه‌روز، هفت روز هفته</p><div class="kv"><span>پاسخ‌گویی آنلاین</span><b>۲۴/۷</b></div><div class="kv"><span>ایمیل</span><b>support@karex.example</b></div></div></div>`,
+'#/about':()=>`<div class="g g2"><div class="card"><h2 style="margin-top:0">دربارهٔ KAREX</h2><p>KAREX پلتفرم معاملات شبانه‌روزی توکن صندوق‌ها و گواهی‌های سپرده است که زیرمجموعهٔ گروه مالی کارآمد ساخته شده تا سرمایه‌گذاری برای نسل جدید ساده، شفاف و همیشه در دسترس باشد.</p><p class="mut">این صفحه متن نمونه است و باید با متن رسمی گروه جایگزین شود.</p></div><div class="card"><h3>راه‌های ارتباطی</h3><div class="kv"><span>آدرس</span><b>تهران، [آدرس دفتر مرکزی؛ نمونه]</b></div><div class="kv"><span>تلفن</span><b>۰۲۱-۰۰۰۰۰۰۰۰</b></div><div class="kv"><span>ایمیل</span><b>info@karex.example</b></div></div></div>`};
+function sendMsg(){const i=$('#cm'),v=i.value.trim();if(!v)return;chat.push({t:v});i.value='';drawChat();setTimeout(()=>{chat.push({b:1,t:'پیامت رسید ✅ کارشناس ما به‌زودی پاسخ می‌دهد. (پاسخ شبیه‌سازی‌شده)'});drawChat()},900)}
+function drawChat(){const l=$('#clog');if(!l)return;l.innerHTML=chat.map(m=>`<div class="m ${m.b?'bt':'us'}">${esc(m.t)}</div>`).join('');l.scrollTop=l.scrollHeight}
+let cur='zargar',route='';
+function view(){const h=location.hash||'#/';route=h;document.querySelectorAll('nav a').forEach(a=>{const x=a.getAttribute('href');a.className=x==h||(h.startsWith('#/a/')&&x=='#/market')?'on':''});
+ const app=$('#app');
+ if(PAGES[h]){app.innerHTML=PAGES[h]();drawChat();return}
+ if(h=='#/market'){app.innerHTML=`<h2 style="margin-top:0">بازار توکن‌ها</h2><div class="card tw"><table id="mt"></table></div>`;return}
+ if(h.startsWith('#/a/')){cur=h.slice(4);if(!A[cur])cur='zargar';const a=A[cur];
+  app.innerHTML=`<div class="pc" style="margin-bottom:12px"><h2 style="margin:0;color:${a.c}">${a.n} <small class="mut">${a.sym}</small></h2><div><span id="ap" class="big"></span> <span id="ac"></span></div></div>
+  <div class="g g4" style="margin-bottom:14px" id="stats"></div>
+  <div class="g main3"><div class="card"><h3>نمودار قیمت</h3>${tfTabs()}<div class="ch" id="ch"><div class="tip"></div></div></div><div id="panel"></div>
+  <div class="card"><h3>دفتر سفارش‌ها</h3><div id="bk"></div></div></div>
+  <div class="g g2" style="margin-top:14px"><div class="card"><h3>معاملات اخیر</h3><div id="tr"></div></div><div class="card"><h3>سفارش‌های باز</h3><div id="or"></div></div></div>`;
+  bindPanel(cur);return}
+ app.innerHTML=`<div class="hero"><b>پولت هیچ‌وقت نمی‌خوابه 🔥 بازار KAREX شبانه‌روز بازه</b><span class="mut">زیرمجموعه گروه مالی کارآمد</span></div><div class="g g4" style="margin-bottom:14px" id="pg"></div><div class="g g2" style="margin-bottom:14px">
+  <div class="card"><div class="mut">موجودی نقدی (فرضی)</div><div class="big" id="dc"></div></div><div class="card"><div class="mut">ارزش کل پرتفوی</div><div class="big" id="dv"></div></div></div>
+  <div class="g main3"><div class="card"><div class="pc"><h3 id="dt">نمودار قیمت</h3><div class="tabs" id="sw"><button data-k="zargar">زرگر</button><button data-k="noqra">نقرآمد</button><button data-k="kmct9">وانت</button><button data-k="pesteh">پسته</button></div></div>${tfTabs()}<div class="ch" id="ch"><div class="tip"></div></div></div>
+  <div id="panel"></div><div class="card"><h3>دفتر سفارش‌ها</h3><div id="bk"></div></div></div>
+  <div class="g g2" style="margin-top:14px"><div class="card"><h3>معاملات اخیر</h3><div id="tr"></div></div><div class="card"><h3>پرتفوی من</h3><div id="ho"></div></div>
+  <div class="card"><h3>سفارش‌های باز</h3><div id="or"></div></div><div class="card"><h3>تاریخچه تراکنش‌ها</h3><div id="hi"></div></div></div>`;
+ bindPanel(cur);}
+function tfTabs(){return `<div class="tabs" id="tf">${[[24,'۶ ساعت'],[96,'۲۴ ساعت']].map(x=>`<button data-f="${x[0]}" class="${T.tf==x[0]?'on':''}">${x[1]}</button>`).join('')}</div>`;}
+function refresh(){const g=(i)=>document.getElementById(i);if(PAGES[route])return;
+ if(route=='#/market'){$('#mt').innerHTML='<tr><th>نماد</th><th>نام</th><th>قیمت (تومان)</th><th>تغییر ۲۴ ساعته</th><th>حجم</th><th></th></tr>'+Object.keys(A).map(k=>{const a=A[k];return `<tr><td><b>${a.sym}</b></td><td>${a.n}</td><td>${fa(a.p)}</td><td>${bd(chg(a))}</td><td>${fa(a.vol)}</td><td><a class="btn pri" style="padding:4px 14px" href="#/a/${k}">معامله</a></td></tr>`}).join('');return}
+ const a=A[cur],H=hold();
+ if(g('pg')){g('pg').innerHTML=Object.keys(A).map(k=>priceCard(k,1)).join('');g('dc').textContent=fa(S.cash)+' تومان';g('dv').textContent=fa(H.tv+S.cash)+' تومان';
+  g('dt').textContent='نمودار '+a.sym;g('sw').querySelectorAll('button').forEach(b=>b.className=b.dataset.k==cur?'on':'');g('ho').innerHTML=H.html;g('hi').innerHTML=history();}
+ if(g('stats')){const d=a.s,h=Math.max(...d),l=Math.min(...d);g('ap').textContent=fa(a.p)+' تومان';g('ac').innerHTML=bd(chg(a));
+  g('stats').innerHTML=[['بالاترین ۲۴ ساعته',fa(h)],['پایین‌ترین ۲۴ ساعته',fa(l)],['حجم معاملات',fa(a.vol)+' واحد'],['ارزش دارایی شما',fa(S.hold[cur]*a.p)]].map(x=>`<div class="card"><div class="mut">${x[0]}</div><div class="big">${x[1]}</div></div>`).join('');}
+ chart(g('ch'),cur);g('bk').innerHTML=book(cur);g('tr').innerHTML=trades(cur);g('or').innerHTML=orders();
+ if(g('pc')){g('pc').textContent=fa(S.cash)+' تومان';g('ph').textContent=fa(S.hold[cur],2)+' واحد'}}
+document.addEventListener('click',e=>{
+ const c=e.target.closest('[data-c]');if(c)cancel(c.dataset.c);
+ const k=e.target.closest('#sw [data-k]');if(k){cur=k.dataset.k;bindPanel(cur);refresh()}
+ const f=e.target.closest('#tf [data-f]');if(f){T.tf=+f.dataset.f;document.querySelectorAll('#tf button').forEach(b=>b.className=b.dataset.f==T.tf?'on':'');refresh()}
+ const s=e.target.closest('[data-side]');if(s)T.side=s.dataset.side});
+addEventListener('hashchange',()=>{view();refresh()});
+view();refresh();setInterval(tick,2500);
+</script>
+</body>
+</html>
